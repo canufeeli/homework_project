@@ -1,0 +1,31 @@
+{
+   "action": {
+      "default_icon": "icon.jpg",
+      "default_popup": "popup.html"
+   },
+   "author": "x6udpngx",
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "css": [ "content-style.css" ],
+      "js": [ "content-script.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Auto insert word-based translations to the text.",
+   "host_permissions": [ "https://clients5.google.com/" ],
+   
+   "manifest_version": 3,
+   "name": "Word-Based Translation",
+   "permissions": [ "tabs", "storage" ],
+   "sandbox": {
+      "pages": [ "popup-sandbox.html" ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "/kuromoji/dict/*" ]
+   } ]
+}
