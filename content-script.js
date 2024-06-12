@@ -1,4 +1,6 @@
-const API_TOKEN = 'Your OpenAI API Key'
+//YOUR　ｏｐｅｎＡＩ API　ＫＥＹ　＝＝＝＝＝＝＝
+const API_TOKEN = 'Your OpenAI API Key';
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 (function () {
     'use strict';
@@ -76,7 +78,6 @@ const API_TOKEN = 'Your OpenAI API Key'
 
     // ============== translate and explain the text ==============
     const API_URL = 'https://api.openai.com/v1/chat/completions'; // Use the correct endpoint for OpenAI's API
-    // const API_TOKEN = 'sk-proj-JTBFU28Zd0s3mLC7WvT2T3BlbkFJpsqOMyinNFK32SsRwRol'
 
     async function translateAndExplain(text) {
         const systemPrompt = "You are a highly capable language translation assistant.\
